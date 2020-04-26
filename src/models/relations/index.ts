@@ -1,4 +1,4 @@
-import UserRelations from './User'
+import UserRelations from './user.relation'
 
 export default {
   UserRelations

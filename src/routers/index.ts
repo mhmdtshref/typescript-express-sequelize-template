@@ -1,6 +1,6 @@
 import router, { Request, Response } from 'express';
 
-import ExampleRouter from './example';
+import ExampleRouter from './example.router';
 
 const apiRouter = router();
 
