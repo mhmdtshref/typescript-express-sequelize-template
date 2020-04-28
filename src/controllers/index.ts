@@ -1,5 +1,5 @@
 
-import * as ExampleController from './example';
+import * as ExampleController from './example.controller';
 
 export {
     ExampleController,
