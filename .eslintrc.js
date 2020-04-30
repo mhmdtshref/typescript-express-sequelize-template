@@ -5,7 +5,9 @@ module.exports = {
     },
     "extends": [
         "eslint:recommended",
-        "plugin:@typescript-eslint/eslint-recommended"
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -13,6 +15,8 @@ module.exports = {
     },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
+        "tsconfigRootDir": __dirname,
+        "project": ["./tsconfig.json"],
         "ecmaVersion": 2018,
         "sourceType": "module"
     },

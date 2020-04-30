@@ -1,3 +1,4 @@
-export const exampleFn = () => {
-    
+export const exampleFn = (): string => {
+    // Write your service code here;
+    return '';
 }

@@ -2,7 +2,7 @@
  
  import { Request, Response } from 'express';
  
- export const index = (request: Request, response: Response) => {
+ export const index = (request: Request, response: Response): void => {
       // Get request query
     const query = request.query;
 
@@ -16,7 +16,9 @@
     response.status(200).json({
         success: true,
         body: {
-            // ADD RESPONSED DATA HERE
+            query,
+            body,
+            params,
         }
     })
 }

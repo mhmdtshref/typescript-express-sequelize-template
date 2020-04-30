@@ -7,7 +7,7 @@ import { sequelize } from './models';
 
 const httpServer = new http.Server(app);
 
-(async () => {
+(async (): Promise<void> => {
   try {
     sequelize.authenticate();
     await sequelize.sync({
@@ -19,7 +19,7 @@ const httpServer = new http.Server(app);
   }
 
   const { PORT: port, HOST: host } = process.env
-  httpServer.listen(port, () => {
+  httpServer.listen(port, (): void => {
     console.log(`Server is running on: http://${host}:${port}`)
   })
 })()
