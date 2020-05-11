@@ -4,14 +4,14 @@
 import { UserService } from '../services';
  
  export const index = (request: Request, response: Response, errorHandler: NextFunction): void => {
-      // Get request query
-    const query = request.query;
+    // Get request query
+    // const query = request.query;
 
     // Get request query
-    const body = request.body;
+    // const body = request.body;
 
     // Get request params
-    const params = request.params;
+    // const params = request.params;
 
     UserService.index().then((users) => {
         // To send response
