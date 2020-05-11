@@ -1,6 +1,5 @@
-
-import * as ExampleController from './example.controller';
+import * as UserController from './user.controller';
 
 export {
-    ExampleController,
+    UserController,
 }

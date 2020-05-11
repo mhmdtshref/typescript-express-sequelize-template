@@ -1,16 +1,13 @@
-import router, { Request, Response } from 'express';
+import router, { Request, Response, NextFunction } from 'express';
 
-import ExampleRouter from './example.router';
+import UserRouter from './user.router';
 
 const apiRouter = router();
 
-apiRouter.use('/examples', ExampleRouter);
+apiRouter.use('/users', UserRouter);
 
-apiRouter.all('*', (request: Request, response: Response) => {
-    return response.status(404).json({
-        success: false,
-        error: 'Page Not Found',
-    });
+apiRouter.all('*', (request: Request, response: Response, errorHandler: NextFunction) => {
+    errorHandler(new Error('Page not found'));
 });
 
 export default apiRouter;
