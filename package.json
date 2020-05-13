@@ -7,9 +7,9 @@
     "test": "test",
     "tsc": "tsc",
     "start": "tsc && node ./dist/index.js",
-    "serve:local": "SET NODE_ENV=local && ts-node-dev --respawn --transpileOnly ./src/index.ts",
-    "serve:development": "SET NODE_ENV=development && ts-node-dev --respawn --transpileOnly --env=development ./src/index.ts",
-    "serve:production": "SET NODE_ENV=production && ts-node-dev --respawn --transpileOnly --env=production ./src/index.ts",
+    "serve:local": "SET NODE_ENV=local&& ts-node-dev --respawn --transpileOnly ./src/index.ts",
+    "serve:development": "SET NODE_ENV=development&& ts-node-dev --respawn --transpileOnly --env=development ./src/index.ts",
+    "serve:production": "SET NODE_ENV=production&& ts-node-dev --respawn --transpileOnly --env=production ./src/index.ts",
     "eslint": "eslint ./src/**/*",
     "eslint:fix": "eslint ./src/**/* --fix"
   },
@@ -42,6 +42,7 @@
     "lodash": "^4.17.15",
     "pg": "^8.0.2",
     "sequelize": "^5.21.6",
+    "sequelize-cli-typescript": "^3.2.0-c",
     "validator": "^13.0.0"
   },
   "devDependencies": {

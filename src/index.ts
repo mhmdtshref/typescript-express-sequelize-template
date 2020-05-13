@@ -3,14 +3,14 @@ dotenvFlow.config({ path: './environment' });
 
 import app from './app';
 import http from 'http';
-import { sequelize } from './models';
+import db from '../models';
 
 const httpServer = new http.Server(app);
 
 (async (): Promise<void> => {
   try {
-    sequelize.authenticate();
-    await sequelize.sync({
+    db.sequelize.authenticate();
+    await db.sequelize.sync({
       force: false,
     });
     console.log('Sequelize Synced with PostgreSQL Database');
