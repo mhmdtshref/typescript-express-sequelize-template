@@ -4,7 +4,8 @@
   "description": "Backend template made using NodeJS, ExpressJS, Sequelize technologies",
   "main": "index.js",
   "scripts": {
-    "test": "SET NODE_ENV=local&& jest",
+    "test": "SET NODE_ENV=test&& jest",
+    "test:coverage": "SET NODE_ENV=test&& jest --coverage",
     "tsc": "tsc",
     "start": "tsc && node ./dist/index.js",
     "serve:local": "SET NODE_ENV=local && ts-node-dev --respawn --transpileOnly ./src/index.ts",
