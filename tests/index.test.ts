@@ -1,5 +1,5 @@
 describe("Test Jest package", () => {
-    it("Testing should pass", async () => {
+    it("Testing should pass", () => {
       expect(true).toEqual(true);
     });
 });
