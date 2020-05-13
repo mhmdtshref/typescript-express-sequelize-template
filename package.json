@@ -4,14 +4,15 @@
   "description": "Backend template made using NodeJS, ExpressJS, Sequelize technologies",
   "main": "index.js",
   "scripts": {
-    "test": "test",
+    "test": "SET NODE_ENV=test&& jest",
+    "test:coverage": "SET NODE_ENV=test&& jest --coverage",
     "tsc": "tsc",
     "start": "tsc && node ./dist/index.js",
     "serve:local": "SET NODE_ENV=local && ts-node-dev --respawn --transpileOnly ./src/index.ts",
     "serve:development": "SET NODE_ENV=development && ts-node-dev --respawn --transpileOnly --env=development ./src/index.ts",
     "serve:production": "SET NODE_ENV=production && ts-node-dev --respawn --transpileOnly --env=production ./src/index.ts",
-    "eslint": "eslint ./src/**/*",
-    "eslint:fix": "eslint ./src/**/* --fix"
+    "eslint": "eslint ./src/**/* ./tests/**/*",
+    "eslint:fix": "eslint ./src/**/* ./tests/**/* --fix"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
   },
   "homepage": "https://github.com/mhmdtshref/typescript-express-sequelize-template#readme",
   "dependencies": {
+    "@types/jest": "^25.2.2",
     "bluebird": "^3.7.2",
     "dotenv-flow": "^3.1.0",
     "express": "^4.17.1",
@@ -59,6 +61,9 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
+    "jest": "^26.0.1",
+    "supertest": "^4.0.2",
+    "ts-jest": "^25.5.1",
     "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.8.3"
   }
