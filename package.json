@@ -11,8 +11,8 @@
     "serve:local": "SET NODE_ENV=local && ts-node-dev --respawn --transpileOnly ./src/index.ts",
     "serve:development": "SET NODE_ENV=development && ts-node-dev --respawn --transpileOnly --env=development ./src/index.ts",
     "serve:production": "SET NODE_ENV=production && ts-node-dev --respawn --transpileOnly --env=production ./src/index.ts",
-    "eslint": "eslint ./src/**/*",
-    "eslint:fix": "eslint ./src/**/* --fix"
+    "eslint": "eslint ./src/**/* ./tests/**/*",
+    "eslint:fix": "eslint ./src/**/* ./tests/**/* --fix"
   },
   "repository": {
     "type": "git",
