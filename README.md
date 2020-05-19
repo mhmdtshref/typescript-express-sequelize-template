@@ -26,4 +26,4 @@ npm install.For example, run the template `npm run serve:local`, to run the app 
 [Developers thumbnails]
 
 # License
-[License details]
+[MIT](https://github.com/mhmdtshref/typescript-express-sequelize-template/blob/master/LICENSE)
