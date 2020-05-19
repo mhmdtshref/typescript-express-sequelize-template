@@ -12,7 +12,7 @@ You need to add environment variables to be able to connect to server port, host
 ### 3. Install NPM packages
 Now, you need to install packages stored in package.json and package-lock.json files, just run this command on the root directory: `environments/.env.example`
 ### 4. Run the app (initial app):
-Warning: By running this the up comming command, you'll create the user example table to the database.
+#### **Warning: By running this the up comming command, you'll create the user example table to the database.**
 Just run the npm script command:
 ```
 npm run serve:[ENVIRONMENT_NAME]
