@@ -6,6 +6,14 @@ To be able to use this template, you need these technologies to be installed on 
 - NodeJS
 - NPM
 Also, you need to have any SQL database URL (this project has been tested with PostgreSQL DB).
+## Built with
+This project has been created using these technologies:
+- NodeJS
+- Express
+- Typescript
+- Sequelize
+- Jest
+- ESLint
 ## Installation
 Follow these steps respectively:
 ### 1. Clone the template
