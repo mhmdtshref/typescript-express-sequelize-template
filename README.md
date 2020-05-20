@@ -1,4 +1,4 @@
-[Description]
+Now, you don't need to start your backend project from zero anymore! This is a usefull, structured and supported with helpful examples, A backend template made mainly with four technologies: Express, Sequelize, Jest and Node server.
 
 # Installation
 Run through these steps in order:
