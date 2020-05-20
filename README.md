@@ -1,7 +1,11 @@
 # typescript-express-sequelize-template
 
 Now, you don't need to start your backend project from zero anymore! This is a usefull, structured and supported with helpful examples, A backend template made mainly with four technologies: Express, Sequelize, Jest and Node server.
-
+## Prerequisites
+To be able to use this template, you need these technologies to be installed on your machine:
+- NodeJS
+- NPM
+Also, you need to have any SQL database URL (this project has been tested with PostgreSQL DB).
 ## Installation
 Follow these steps respectively:
 ### 1. Clone the template
