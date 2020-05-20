@@ -3,7 +3,7 @@
 Now, you don't need to start your backend project from zero anymore! This is a usefull, structured and supported with helpful examples, A backend template made mainly with four technologies: Express, Sequelize, Jest and Node server.
 
 ## Installation
-Run through these steps in order:
+Follow these steps respectively:
 ### 1. Clone the template
 At first, you need to clone this template on your local machine, it would be better for you to **fork** this repo to your account. Specially if you want to make changes on the template and use your version later (then clone your forked repo), otherwise, clone my repo by running this command on your terminal:
 ```
