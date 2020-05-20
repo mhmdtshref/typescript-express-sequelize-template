@@ -24,6 +24,8 @@ npm install.For example, run the template `npm run serve:local`, to run the app 
 - Using Typescript language.
 - Setup testing evironment using Jest tests with coverage reporting.
 - Separated files for relations/associations between sequelize models.
+- Database models validations.
+- Using MVC pattern.
 - eslint linting and fixing scripts.
 - Supporting Multiple environments.
 - One place to handle errors.
