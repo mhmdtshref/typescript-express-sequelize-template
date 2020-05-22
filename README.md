@@ -1,11 +1,11 @@
 # Typescript Express Sequelize Template
 
-Now, you don't need to start your backend project from zero anymore! This is a usefull, structured and supported with helpful examples, A backend template made mainly with four technologies: Express, Sequelize, Jest and Node server.
+You don't need to start your backend project from scratch anymore! This is a usefull, structured and supported with helpful examples, A backend template made mainly with four technologies: Express, Sequelize, Jest and Node server.
 ## Prerequisites
 To be able to use this template, you need these technologies to be installed on your machine:
 - NodeJS
 - NPM
-Also, you need to have any SQL database URL (this project has been tested with PostgreSQL DB).
+Also, you need to have any SQL database URL (this project has been tested with PostgreSQL-v12 database).
 ## Built with
 This project has been created using these technologies:
 - NodeJS
@@ -14,6 +14,7 @@ This project has been created using these technologies:
 - Sequelize
 - Jest
 - ESLint
+- Husky
 ## Installation
 Follow these steps respectively:
 ### 1. Clone the template
@@ -41,6 +42,7 @@ npm install.For example, run the template `npm run serve:local`, to run the app 
 - Database models validations.
 - Using MVC pattern.
 - eslint linting and fixing scripts.
+- Auto-fixing for linting errors before committing changes.
 - Supporting Multiple environments.
 - One place to handle errors.
 
