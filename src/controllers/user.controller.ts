@@ -1,8 +1,9 @@
  
  
- import { Request, Response, NextFunction } from 'express';
+import { Request, Response, NextFunction } from 'express';
 import { UserService } from '../services';
- 
+import Boom from '@hapi/boom';
+
  export const index = (request: Request, response: Response, errorHandler: NextFunction): void => {
     // Get request query
     // const query = request.query;
@@ -21,7 +22,7 @@ import { UserService } from '../services';
                 users,
             },
         });
-    }).catch((error) => {
-        errorHandler(error);
+    }).catch((error: Error) => {
+        errorHandler(Boom.badRequest(error.message));
     });
 }
