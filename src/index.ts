@@ -1,21 +1,50 @@
-import dotenvFlow from 'dotenv-flow';
-dotenvFlow.config({ path: './environment' });
-
-import app from './app';
-import http from 'http';
+import DotenvFlow from 'dotenv-flow';
+DotenvFlow.config({ path: './environment' });
+import { ExpressApp } from './app';
+import Http from 'http';
 import { sequelize } from './models';
+import { Sequelize } from 'sequelize/types';
 
-const httpServer = new http.Server(app);
+export class Server {
 
-sequelize.authenticate()
-.then(() => sequelize.sync({ force: false }))
-.then(() => {
-  console.log('Sequelize Synced with PostgreSQL Database');
-  const { PORT: port, HOST: host } = process.env
-  httpServer.listen(port, (): void => {
-    console.log(`Server is running on: http://${host}:${port}`)
-  })
-})
-.catch((error: Error) => {
-  console.log('Sequelize connection error: ', error.message);
-});
+  expressApp = new ExpressApp();
+  httpServer: Http.Server;
+
+  constructor(){
+    this.httpServer = new Http.Server(this.expressApp.app);
+  }
+
+  runServer = (): Promise<void | Http.Server> => {
+    return this.databaseConnection()
+    .then(this.serverListen)
+    .catch(this.serverErrorHandler);
+  }
+
+  databaseConnection = (): Promise<Sequelize> => {
+    return this.sequelizeAuthenticate()
+    .then(this.sequelizeSync);
+  }
+
+  sequelizeAuthenticate = (): Promise<void> => {
+    return sequelize.authenticate();
+  }
+
+  sequelizeSync = (): Promise<Sequelize> => {
+    return sequelize.sync({ force: false });
+  }
+
+  serverListen = (): Http.Server => {
+    const { PORT: port, HOST: host } = process.env
+    return this.httpServer.listen(port, (): void => {
+      console.log(`Server is running on: http://${host}:${port}`)
+    });
+  }
+
+  serverErrorHandler = (error: Error): void => {
+    console.log('Server run error: ', error.message);
+  }
+
+}
+
+const server = new Server();
+server.runServer();

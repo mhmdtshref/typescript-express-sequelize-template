@@ -3,7 +3,9 @@ import { UserController } from '../controllers';
 
 const router = Router();
 
-router.get('/', UserController.index);
+const userController = new UserController();
+
+router.get('/', userController.index);
 // router.put('/:id', ExampleController.update);
 // router.delete('/:id', ExampleController.del);
 // router.post('/', ExampleController.create); 
