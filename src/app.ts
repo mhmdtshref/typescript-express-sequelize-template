@@ -4,19 +4,18 @@ import apiRouter from './routers';
 
 export class ExpressApp {
 
-    app: any;
+    app = express();
 
     constructor() {
-        this.app = express();
         this.setAppSettings();
     }
 
-    setAppSettings = () => {
+    setAppSettings = (): void => {
         this.app.use(express.json())
         this.app.use(express.urlencoded({ extended: true }))
     }
 
-    setAppRouter = () => {
+    setAppRouter = (): void => {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         this.app.use('/api', apiRouter, (error: Error, request: Request, response: Response, next: NextFunction) => {
             response.status(400).json({
