@@ -1,14 +1,10 @@
- 
- 
 import { Request, Response, NextFunction } from 'express';
 import { UserService } from '../services';
 import Boom from '@hapi/boom';
 
 export class UserController {
 
-    constructor(
-        private userService: UserService,
-    ) {}
+    private userService = new UserService();
 
     index = (request: Request, response: Response, errorHandler: NextFunction): void => {
         // Get request query
