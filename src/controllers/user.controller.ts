@@ -5,6 +5,11 @@ import { UserService } from '../services';
 import Boom from '@hapi/boom';
 
 export class UserController {
+
+    constructor(
+        private userService: UserService,
+    ) {}
+
     index = (request: Request, response: Response, errorHandler: NextFunction): void => {
         // Get request query
         // const query = request.query;
@@ -15,7 +20,7 @@ export class UserController {
         // Get request params
         // const params = request.params;
     
-        UserService.index().then((users) => {
+        this.userService.index().then((users) => {
             // To send response
             response.status(200).json({
                 success: true,
