@@ -1,11 +1,12 @@
 import dotenvFlow from 'dotenv-flow';
 dotenvFlow.config({ path: './environment' });
 
-import app from './app';
+import { ExpressApp } from './app';
+const expressApp = new ExpressApp();
 import http from 'http';
 import { sequelize } from './models';
 
-const httpServer = new http.Server(app);
+const httpServer = new http.Server(expressApp.app);
 
 sequelize.authenticate()
 .then(() => sequelize.sync({ force: false }))
