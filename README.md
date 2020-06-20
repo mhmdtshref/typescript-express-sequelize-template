@@ -12,6 +12,7 @@ This project has been created using these technologies:
 - Express
 - Typescript
 - Sequelize
+- Hapi/Boom
 - Jest
 - ESLint
 - Husky
@@ -45,6 +46,7 @@ npm install.For example, run the template `npm run serve:local`, to run the app 
 - Auto-fixing for linting errors before committing changes.
 - Supporting Multiple environments.
 - One place to handle errors.
+- Error handling using Hapi/Boom module (consistant & structured errors).
 
 ## Developers:
 | <img src="https://avatars3.githubusercontent.com/u/19406147?s=460&u=80bc717b8a02a14b7db59f24bf578efdcb0bfa2e&v=4" width="230" /> <br/> Mohamed Sharif|

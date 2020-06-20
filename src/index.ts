@@ -7,19 +7,15 @@ import { sequelize } from './models';
 
 const httpServer = new http.Server(app);
 
-(async (): Promise<void> => {
-  try {
-    sequelize.authenticate();
-    await sequelize.sync({
-      force: false,
-    });
-    console.log('Sequelize Synced with PostgreSQL Database');
-  } catch (error) {
-    console.log('Sequelize connection error: ', error.message);
-  }
-
+sequelize.authenticate()
+.then(() => sequelize.sync({ force: false }))
+.then(() => {
+  console.log('Sequelize Synced with PostgreSQL Database');
   const { PORT: port, HOST: host } = process.env
   httpServer.listen(port, (): void => {
     console.log(`Server is running on: http://${host}:${port}`)
   })
-})()
+})
+.catch((error: Error) => {
+  console.log('Sequelize connection error: ', error.message);
+});
