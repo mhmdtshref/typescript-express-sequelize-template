@@ -49,7 +49,7 @@
     "express": "^4.17.1",
     "pg": "^8.0.2",
     "sequelize": "^5.21.6",
-    "validator": "^13.0.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.30",
